@@ -7,7 +7,7 @@ The aim of this project is to build a deep learning model using CNNs and transfe
 
 ---
 
-## 🧠 Problem Statement
+## Problem Statement
 
 Manual waste segregation is inefficient and error-prone. Automating this task using computer vision can significantly improve waste processing and recycling. The project classifies images into 7 categories:
 
@@ -21,7 +21,7 @@ Manual waste segregation is inefficient and error-prone. Automating this task us
 
 ---
 
-## 📂 Dataset Overview
+## Dataset Overview
 
 - The dataset is organized into folders, one for each waste category.
 - Each folder contains multiple images representing that waste type.
@@ -29,7 +29,7 @@ Manual waste segregation is inefficient and error-prone. Automating this task us
 
 ---
 
-## 🧪 Tech Stack & Libraries
+## Tech Stack & Libraries
 
 - **Python**
 - **TensorFlow 2.x / Keras**
@@ -39,29 +39,29 @@ Manual waste segregation is inefficient and error-prone. Automating this task us
 
 ---
 
-## 🧹 Steps Followed
+##  Steps Followed
 
-### 1. 📦 Data Preparation
+### 1. Data Preparation
 
 - Loaded and resized all images to a fixed shape (128x128x3).
 - Encoded labels using `LabelEncoder`.
 - Visualized class distribution to understand imbalance.
 
-### 2. 🧼 Preprocessing
+### 2. Preprocessing
 
 - Normalized images using `ImageDataGenerator`.
 - Applied real-time data augmentation:
   - Rotation, Zoom, Shearing
   - Horizontal and vertical flipping
 
-### 3. 🧠 Model Building
+### 3. Model Building
 
 - Started with a custom CNN but accuracy was low (~32%).
 - Switched to **MobileNetV2** for transfer learning.
 - Used dropout layers and global average pooling.
 - Compiled with `Adam` optimizer and cross-entropy loss.
 
-### 4. 🏋️ Model Training
+### 4. Model Training
 
 - Trained on augmented data with:
   - `EarlyStopping`
@@ -69,7 +69,7 @@ Manual waste segregation is inefficient and error-prone. Automating this task us
   - `ModelCheckpoint`
 - Achieved up to **65% validation accuracy**.
 
-### 5. 🧪 Model Testing
+### 5. Model Testing
 
 - Evaluated on a test split (~10% data).
 - Test accuracy was **~18%**, likely due to domain shift or class imbalance.
@@ -77,7 +77,7 @@ Manual waste segregation is inefficient and error-prone. Automating this task us
 
 ---
 
-## 📈 Results
+##  Results
 
 | Dataset Split | Accuracy |
 |---------------|----------|
